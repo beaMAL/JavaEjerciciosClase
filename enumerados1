@@ -1,0 +1,52 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package enumerado1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author admin-infanta
+ */
+public class enumerado1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        enum colores{ROJO, VERDE, AZUL};
+       colores semaforo;
+       semaforo=colores.ROJO;
+       Transporte v;
+       /*v=Transporte.BARCO;
+        System.out.println(v.velocidad);
+        System.out.println(v.tipo);
+        Scanner sc= new Scanner(System.in);
+        int valor;
+        Transporte vehiculo=null;
+        do{
+            System.out.println("Introduce un número según:");
+            System.out.println("1 Coche");
+            System.out.println("2 Avion");
+            System.out.println("3 Barco");
+            System.out.println("4 Camion");
+            System.out.println("5 Helicoptero");
+            System.out.println("6 Tren");
+            valor= sc.nextInt();
+                 
+        }while (valor<1 || valor > 6);*/
+        for (Transporte a: Transporte.values()){
+            System.out.println(a.name());
+            if (a.velocidad > 100){
+                System.out.println("Es MUY RAPIDO");
+                
+            }else{
+                System.out.println("Es LENTISIMO");
+            }
+            System.out.println(a.tipo);
+            System.out.println("****");
+        }
